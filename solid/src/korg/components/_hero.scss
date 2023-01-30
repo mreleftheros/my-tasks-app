@@ -1,0 +1,60 @@
+@use "../abstracts/" as *;
+@use "sass:color";
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+
+  &-figure {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, color.scale($primary, $lightness: -85%, $alpha: 90%), transparent);
+  }
+
+  &-box {
+    position: relative;
+    z-index: 3;
+  }
+
+  &-rating {
+    position: relative;
+    height: 5rem;
+    width: 30.5rem;
+  }
+
+  &-stars {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  &-empty-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("/empty-stars.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+  
+  &-filled-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("/filled-stars.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}

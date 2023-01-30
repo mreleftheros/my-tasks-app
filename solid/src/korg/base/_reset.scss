@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: minmax(15vh, auto) 1fr;
+  min-height: 100vh;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: get-clamp(s);
+  overflow-x: hidden;
+
+  @include mq(s) {
+    grid-template-rows: minmax(12.5vh, auto) 1fr minmax(7.5, auto);
+  }
+}
+
+.footer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(s) {
+    display: flex;
+  }
+}

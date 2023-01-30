@@ -1,0 +1,16 @@
+.toasts {
+  position: fixed;
+  z-index: 1;
+  top: 1.5%;
+  right: 1.5%;
+
+  &-item {
+    width: min(40rem, 100vh);
+    transition: transform 1.5s ease-in, opacity 1.5s ease-in;
+
+    &.moved-out {
+      transform: translateX(50%);
+      opacity: 0.1;
+    }
+  }
+}

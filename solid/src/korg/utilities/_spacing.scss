@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+$sides: (
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left",
+  "y": "block",
+  "x": "inline"
+);
+
+$spacing: (
+  xs: $spacing * 0.5,
+  s: $spacing * 0.75,
+  m: $spacing,
+  l: $spacing * 1.5,
+  xl: $spacing * 2.5,
+  xxl: $spacing * 5,
+  auto: auto
+);
+
+@each $key,
+$value in $sides {
+
+  @each $k,
+  $v in $spacing {
+    .m {
+      &#{$key}-#{$k} {
+        margin-#{$value}: $v;
+      }
+    }
+
+    .p {
+      &#{$key}-#{$k} {
+        padding-#{$value}: $v;
+      }
+    }
+  }
+
+  @each $k,
+  $v in $spacing {
+    .m-#{$k} {
+      margin: $v;
+    }
+
+    .p-#{$k} {
+      padding: $v;
+    }
+  }
+}

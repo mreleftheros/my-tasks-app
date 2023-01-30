@@ -1,0 +1,16 @@
+@use "./variables" as *;
+@use "sass:map";
+
+@mixin mq($size: s) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+
+  @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}

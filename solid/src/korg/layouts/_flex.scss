@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap-xs {
+  gap: 0.25rem;
+}
+
+.gap-s {
+  gap: 0.5rem;
+}
+
+.gap-m {
+  gap: 1.5rem;
+}
+
+.gap-l {
+  gap: 2.5rem;
+}
+
+.gap-xl {
+  gap: 5rem;
+}

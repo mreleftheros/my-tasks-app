@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "./variables" as *;
+
+@function get-clamp($size: s) {
+  @if map.has-key($font-sizes, $size) {
+    $sz: map.get($font-sizes, $size);
+    $min: map.get($sz, min);
+    $max: map.get($sz, max);
+
+    @return clamp(#{$min}, calc(#{$min} + #{$font-scale}), #{$max});
+  }
+
+  @else {
+    @error 'Invalid $font-sizes value.';
+  }
+}

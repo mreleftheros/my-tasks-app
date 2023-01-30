@@ -1,0 +1,17 @@
+.hover {
+  opacity: 1;
+  transition: opacity .15s ease-out;
+
+  &:hover {
+    opacity: .75;
+  }
+}
+
+.hover-reverse {
+  opacity: .75;
+  transition: opacity .15s ease-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}

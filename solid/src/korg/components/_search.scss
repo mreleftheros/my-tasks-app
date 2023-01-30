@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.search {
+
+  &-group {
+    display: flex;
+    border: solid $primary .1rem;
+    opacity: .75;
+  }
+
+  &-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: get-clamp(s);
+  }
+
+  &-btn {
+    flex-basis: 2.5rem;
+  }
+}

@@ -1,0 +1,57 @@
+@use "../abstracts/" as *;
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.1rem;
+  line-height: 1.1;
+  max-width: 25ch;
+  font-size: get-clamp(l);
+  font-family: serif;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+button,
+span {
+  display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+label {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  max-width: 30ch;
+
+  @include mq(m) {
+    max-width: 60ch;
+  }
+}
+
+section {
+  padding: 5rem 1.5rem;
+}
+
+.section-s {
+  min-height: 75vh;
+}
+
+.section {
+  min-height: 100vh;
+}

@@ -1,0 +1,34 @@
+@use "sass:color";
+
+// colors
+$primary: hsl(200, 90%, 50%) !default;
+$secondary: color.complement($primary) !default;
+$error: hsl(340, 90%, 50%) !default;
+$info: hsl(50, 90%, 50%) !default;
+$success: hsl(140, 90%, 50%) !default;
+
+// spacing
+$spacing: 1rem !default;
+
+// font-size
+$font-size: 1rem !default;
+$font-scale: 3vw;
+
+// breakpoints
+$breakpoints: (
+  s: 48rem,
+  m: 76.8rem,
+  l: 110rem,
+);
+
+// font-sizes
+$font-sizes: (
+  s: (min: $font-size * 1.5,
+    max: $font-size * 1.75),
+  m: (min: $font-size * 1.75,
+    max: $font-size * 2.5),
+  l: (min: $font-size * 2.5,
+    max: $font-size * 3.5),
+  xl: (min: $font-size * 4,
+    max: $font-size * 6.5),
+);

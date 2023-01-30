@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+.auth {
+  width: 100%;
+  box-shadow: 0.2rem 0.2rem 0.5rem #121;
+  min-height: 40rem;
+
+  &-title {
+    font-weight: 400;
+    font-size: get-clamp(m);
+  }
+
+  &-label {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: get-clamp(s);
+  }
+
+  &-input {
+    padding: .25rem .75rem;
+    font-size: get-clamp(s);
+  }
+}

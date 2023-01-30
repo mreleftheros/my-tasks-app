@@ -1,0 +1,38 @@
+@use "../abstracts/" as *;
+
+.filter {
+  &-label {
+    font-size: get-clamp(s);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  &-select {
+    position: relative;
+    z-index: 1;
+
+
+    &-input {
+      position: relative;
+      z-index: -1;
+      display: block;
+      appearance: none;
+      width: 100%;
+      cursor: pointer;
+      height: 100%;
+      border: none;
+      font-size: get-clamp(s);
+    }
+
+    &::before {
+      content: "▼";
+      position: absolute;
+      z-index: 2;
+      left: 100%;
+      top: 50%;
+      transform: translate(-100%, -40%);
+      color: $primary;
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+$rounded: (
+  s: .25rem,
+  m: .75rem,
+  l: 1.5rem,
+  xl: 2.5rem
+);
+
+@each $k,
+$v in $rounded {
+  .rounded-#{$k} {
+    border-radius: $v;
+  }
+}
+
+.rounded {
+  border-radius: 50%;
+}
