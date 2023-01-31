@@ -1,16 +1,17 @@
 export const onRequestPost = ctx => {
-  const json = JSON.stringify({
-    data: {
-      id: 0,
-      username: "test",
-      email: "test@gmail.com",
+  return new Response(
+    {
+      data: {
+        id: 0,
+        username: "test",
+        email: "test@gmail.com",
+      },
     },
-  });
-
-  return new Response(json, {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+    {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 };
