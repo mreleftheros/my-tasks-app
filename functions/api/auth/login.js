@@ -1,11 +1,11 @@
 export const onRequestPost = ctx => {
-  return new Response(
-    JSON.stringify({
-      data: {
-        id: 0,
-        username: "test",
-        email: "test@gmail.com",
-      },
-    })
-  );
+  const json = JSON.stringify({
+    data: {
+      id: 0,
+      username: "test",
+      email: "test@gmail.com",
+    },
+  });
+
+  return new Response(json, { status: 200 });
 };
