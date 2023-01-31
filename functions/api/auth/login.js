@@ -7,5 +7,10 @@ export const onRequestPost = ctx => {
     },
   });
 
-  return new Response(json, { status: 200 });
+  return new Response(json, {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 };
