@@ -1,4 +1,4 @@
-const BASE_URL_FUNCTIONS = window.location.origin + "/api/auth";
+const BASE_URL_FUNCTIONS = "https://my-tasks-app.pages.dev/api/auth";
 const BASE_URL_EXPRESS = "http://localhost:5000/api/auth";
 
 export const signup_post = async (username, email, password) => {
