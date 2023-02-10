@@ -18,8 +18,6 @@
     "@solidjs/router": "^0.7.0",
     "solid-js": "^1.6.9",
     "solid-start": "^0.2.15",
-    "solid-start-cloudflare-pages": "^0.2.17",
-    "solid-transition-group": "^0.0.12",
     "undici": "^5.15.1"
   },
   "engines": {
